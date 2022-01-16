@@ -61,9 +61,9 @@ final class RootViewController: UIViewController {
   @objc dynamic func showButtonTouchUpInside() {
     Toast(text: "Basic Toast").show()
     Toast(attributedText: NSAttributedString(string: "AttributedString Toast", attributes: [NSAttributedString.Key.backgroundColor: UIColor.yellow])).show()
-    Toast(text: "You can set duration. `Delay.short` means 2 seconds.\n" +
-      "`Delay.long` means 3.5 seconds.",
-          duration: Delay.long).show()
+    Toast(text: "You can set duration. `ToasterDelay.short` means 2 seconds.\n" +
+      "`ToasterDelay.long` means 3.5 seconds.",
+          duration: ToasterDelay.long).show()
     Toast(text: "With delay, Toaster will be shown after delay.", delay: 1, duration: 5).show()
   }
 

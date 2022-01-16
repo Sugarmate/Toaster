@@ -1,6 +1,6 @@
 import UIKit
 
-public class Delay: NSObject {
+public class ToasterDelay: NSObject {
   @available(*, unavailable) private override init() {}
   // `short` and `long` (lowercase) are reserved words in Objective-C
   // so we capitalize them instead of the default `short_` and `long_`
@@ -59,14 +59,14 @@ open class Toast: Operation {
 
   /// Initializer.
   /// Instantiates `self.view`, so must be called on main thread.
-  @objc public init(text: String?, delay: TimeInterval = 0, duration: TimeInterval = Delay.short) {
+  @objc public init(text: String?, delay: TimeInterval = 0, duration: TimeInterval = ToasterDelay.short) {
     self.delay = delay
     self.duration = duration
     super.init()
     self.text = text
   }
 
-  @objc public init(attributedText: NSAttributedString?, delay: TimeInterval = 0, duration: TimeInterval = Delay.short) {
+  @objc public init(attributedText: NSAttributedString?, delay: TimeInterval = 0, duration: TimeInterval = ToasterDelay.short) {
     self.delay = delay
     self.duration = duration
     super.init()
